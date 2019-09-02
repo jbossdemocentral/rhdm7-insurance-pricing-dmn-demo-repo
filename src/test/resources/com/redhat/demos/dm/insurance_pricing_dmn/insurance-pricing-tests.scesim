@@ -3,7 +3,7 @@
     <simulationDescriptor>
       <factMappings>
         <FactMapping>
-          <expressionElements class="linked-list"/>
+          <expressionElements/>
           <expressionIdentifier>
             <name>Index</name>
             <type>OTHER</type>
@@ -16,7 +16,7 @@
           <factAlias>#</factAlias>
         </FactMapping>
         <FactMapping>
-          <expressionElements class="linked-list"/>
+          <expressionElements/>
           <expressionIdentifier>
             <name>Description</name>
             <type>OTHER</type>
@@ -29,7 +29,7 @@
           <factAlias>Scenario description</factAlias>
         </FactMapping>
         <FactMapping>
-          <expressionElements class="linked-list">
+          <expressionElements>
             <ExpressionElement>
               <step>Age</step>
             </ExpressionElement>
@@ -48,7 +48,7 @@
           <genericTypes/>
         </FactMapping>
         <FactMapping>
-          <expressionElements class="linked-list">
+          <expressionElements>
             <ExpressionElement>
               <step>had previous incidents</step>
             </ExpressionElement>
@@ -67,7 +67,7 @@
           <genericTypes/>
         </FactMapping>
         <FactMapping>
-          <expressionElements class="linked-list">
+          <expressionElements>
             <ExpressionElement>
               <step>Insurance Total Price</step>
             </ExpressionElement>
@@ -92,24 +92,214 @@
       <dmnName>Insurance Pricing</dmnName>
       <skipFromBuild>false</skipFromBuild>
     </simulationDescriptor>
-    <scenarios class="linked-list">
+    <scenarios>
+      <Scenario>
+        <factMappingValues>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>Scenario description</name>
+              <className>java.lang.String</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>Description</name>
+              <type>OTHER</type>
+            </expressionIdentifier>
+            <rawValue class="string">Over 25 without incidents</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>Age</name>
+              <className>Age</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>0|1</name>
+              <type>GIVEN</type>
+            </expressionIdentifier>
+            <rawValue class="string">28</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>had previous incidents</name>
+              <className>had previous incidents</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>0|2</name>
+              <type>GIVEN</type>
+            </expressionIdentifier>
+            <rawValue class="string">false</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>Insurance Total Price</name>
+              <className>Insurance Total Price</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>0|3</name>
+              <type>EXPECT</type>
+            </expressionIdentifier>
+            <rawValue class="string">1000</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier>
+              <name>#</name>
+              <className>java.lang.Integer</className>
+            </factIdentifier>
+            <expressionIdentifier>
+              <name>Index</name>
+              <type>OTHER</type>
+            </expressionIdentifier>
+            <rawValue class="string">1</rawValue>
+          </FactMappingValue>
+        </factMappingValues>
+        <simulationDescriptor>
+          <factMappings>
+            <FactMapping>
+              <expressionElements/>
+              <expressionIdentifier reference="../../../../factMappingValues/FactMappingValue[5]/expressionIdentifier"/>
+              <factIdentifier reference="../../../../factMappingValues/FactMappingValue[5]/factIdentifier"/>
+              <className>java.lang.Integer</className>
+              <factAlias>#</factAlias>
+            </FactMapping>
+            <FactMapping>
+              <expressionElements/>
+              <expressionIdentifier reference="../../../../factMappingValues/FactMappingValue/expressionIdentifier"/>
+              <factIdentifier reference="../../../../factMappingValues/FactMappingValue/factIdentifier"/>
+              <className>java.lang.String</className>
+              <factAlias>Scenario description</factAlias>
+            </FactMapping>
+            <FactMapping>
+              <expressionElements>
+                <ExpressionElement>
+                  <step>Age</step>
+                </ExpressionElement>
+              </expressionElements>
+              <expressionIdentifier reference="../../../../factMappingValues/FactMappingValue[2]/expressionIdentifier"/>
+              <factIdentifier reference="../../../../factMappingValues/FactMappingValue[2]/factIdentifier"/>
+              <className>number</className>
+              <factAlias>Age</factAlias>
+              <expressionAlias>value</expressionAlias>
+              <genericTypes/>
+            </FactMapping>
+            <FactMapping>
+              <expressionElements>
+                <ExpressionElement>
+                  <step>had previous incidents</step>
+                </ExpressionElement>
+              </expressionElements>
+              <expressionIdentifier reference="../../../../factMappingValues/FactMappingValue[3]/expressionIdentifier"/>
+              <factIdentifier reference="../../../../factMappingValues/FactMappingValue[3]/factIdentifier"/>
+              <className>boolean</className>
+              <factAlias>had previous incidents</factAlias>
+              <expressionAlias>value</expressionAlias>
+              <genericTypes/>
+            </FactMapping>
+            <FactMapping>
+              <expressionElements>
+                <ExpressionElement>
+                  <step>Insurance Total Price</step>
+                </ExpressionElement>
+              </expressionElements>
+              <expressionIdentifier reference="../../../../factMappingValues/FactMappingValue[4]/expressionIdentifier"/>
+              <factIdentifier reference="../../../../factMappingValues/FactMappingValue[4]/factIdentifier"/>
+              <className>number</className>
+              <factAlias>Insurance Total Price</factAlias>
+              <expressionAlias>value</expressionAlias>
+              <genericTypes/>
+            </FactMapping>
+          </factMappings>
+          <dmnFilePath>src/main/resources/com/redhat/demos/dm/insurance_pricing_dmn/insurance-pricing.dmn</dmnFilePath>
+          <type>DMN</type>
+          <dmnNamespace>http://www.trisotech.com/definitions/_bb8b9304-b29f-462e-9f88-03d0d868aec5</dmnNamespace>
+          <dmnName>Insurance Pricing</dmnName>
+          <skipFromBuild>false</skipFromBuild>
+        </simulationDescriptor>
+      </Scenario>
       <Scenario>
         <factMappingValues>
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/expressionIdentifier"/>
+            <rawValue class="string">Over 25 with incidents</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/expressionIdentifier"/>
+            <rawValue class="string">30</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/expressionIdentifier"/>
+            <rawValue class="string">true</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[5]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[5]/expressionIdentifier"/>
+            <rawValue class="string">1250</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping/expressionIdentifier"/>
+            <rawValue class="string">2</rawValue>
+          </FactMappingValue>
+        </factMappingValues>
+        <simulationDescriptor reference="../../../simulationDescriptor"/>
+      </Scenario>
+      <Scenario>
+        <factMappingValues>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/expressionIdentifier"/>
+            <rawValue class="string">Below 25 without incidents</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/expressionIdentifier"/>
+            <rawValue class="string">22</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/expressionIdentifier"/>
+            <rawValue class="string">false</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[5]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[5]/expressionIdentifier"/>
+            <rawValue class="string">2000</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping/expressionIdentifier"/>
+            <rawValue class="string">3</rawValue>
+          </FactMappingValue>
+        </factMappingValues>
+        <simulationDescriptor reference="../../../simulationDescriptor"/>
+      </Scenario>
+      <Scenario>
+        <factMappingValues>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[2]/expressionIdentifier"/>
+            <rawValue class="string">Below 25 with incidents</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/expressionIdentifier"/>
+            <rawValue class="string">20</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/expressionIdentifier"/>
+            <rawValue class="string">true</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[5]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[5]/expressionIdentifier"/>
+            <rawValue class="string">3000</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping/expressionIdentifier"/>
+            <rawValue class="string">4</rawValue>
           </FactMappingValue>
         </factMappingValues>
         <simulationDescriptor reference="../../../simulationDescriptor"/>
