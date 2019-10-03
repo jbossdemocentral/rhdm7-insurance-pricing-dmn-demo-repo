@@ -57,5 +57,10 @@
       <name>Guvnor M2 Repo</name>
       <url>http://localhost:8080/decision-central/maven2/</url>
     </repository>
+    <repository>
+      <id>red-hat-ga-m2-repo</id>
+      <name>Red Hat GA M2 Repo</name>
+      <url>https://maven.repository.redhat.com/ga</url>
+    </repository>
   </repositories>
 </project>
